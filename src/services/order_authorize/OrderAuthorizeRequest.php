@@ -7,6 +7,7 @@ use Platron\Connectum\data_objects\ClientData;
 use Platron\Connectum\data_objects\DynamicDescriptorData;
 use Platron\Connectum\data_objects\LocationData;
 use Platron\Connectum\data_objects\OptionsData;
+use Platron\Connectum\data_objects\Secure3dData;
 use Platron\Connectum\services\BasePostRequest;
 
 class OrderAuthorizeRequest extends BasePostRequest {
@@ -35,6 +36,8 @@ class OrderAuthorizeRequest extends BasePostRequest {
     protected $options;
     /** @var DynamicDescriptorData */
     protected $dynamic_descritor;
+    /** @var Secure3dData */
+    protected $secure3d;
     
     /**
      * {@inheritdoc}
@@ -126,7 +129,16 @@ class OrderAuthorizeRequest extends BasePostRequest {
         $this->dynamic_descritor = $dynamicDescriptor;
         return $this;
     }
-    
+
+	/**
+	 * @param Secure3dData $secure3dData
+	 * @return self
+	 */
+    public function addSecure3dData(Secure3dData $secure3dData){
+    	$this->secure3d = $secure3dData;
+		return $this;
+	}
+
     /**
      * {@inheritdoc}
      */
