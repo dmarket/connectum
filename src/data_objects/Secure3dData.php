@@ -9,4 +9,8 @@ class Secure3dData extends BaseDataObject {
     public $segment;
     public $status;
     public $updated;
+    public $dsrp;
+    public $xid;
+    public $cavv;
+    public $eci;
 }
