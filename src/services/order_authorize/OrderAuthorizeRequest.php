@@ -134,7 +134,7 @@ class OrderAuthorizeRequest extends BasePostRequest {
 	 * @param Secure3dData $secure3dData
 	 * @return self
 	 */
-    public function addSecure3dData(Secure3dData $secure3dData){
+    public function setSecure3dData(Secure3dData $secure3dData){
     	$this->secure3d = $secure3dData;
 		return $this;
 	}
