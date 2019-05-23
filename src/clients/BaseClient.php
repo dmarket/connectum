@@ -54,15 +54,6 @@ abstract class BaseClient {
     public function getHttpCode(){
     	return $this->httpCode;
 	}
-    
-    /**
-     * Set test mode
-     * @return self
-     */
-    public function setTest(){
-        $this->baseUrl = 'https://api.sandbox.connectum.eu';
-        return $this;
-    }
 
     /**
      * Set log
