@@ -2,6 +2,7 @@
 
 namespace Platron\Connectum\services\order_info;
 
+use Platron\Connectum\data_objects\Form3dData;
 use Platron\Connectum\services\BaseResponse;
 use Platron\Connectum\data_objects\CardData;
 use Platron\Connectum\data_objects\ClientData;
