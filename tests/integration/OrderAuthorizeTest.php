@@ -22,7 +22,8 @@ class OrderAuthorizeTest extends IntegrationTestBase {
         $location->ip = '8.8.8.8';
         
         $request = new OrderAuthorizeRequest(10, 'RUB', self::PAN_SUCCESS, $card, $location);
-        
+		$request->setCustomFields(['site' => $this->merchantSite]);
+
         $this->assertTrue((new OrderAuthorizeResponse($client->sendRequest($request)))->isValid());
     }
 }

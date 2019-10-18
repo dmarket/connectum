@@ -13,17 +13,9 @@ class IntegrationTestBase extends \PHPUnit_Framework_TestCase {
         PAN_INTERNAL_ERROR = '5555555555555599',
         PAN_3DS_NOT_ENROLLED = '4276838748917319',
         PAN_DECLINED_AS_FRAUD = '4000000000000002';
-    
+
     /** @var string */
-    protected $testingUrl;
-    /** @var string */
-    protected $login;
-    /** @var string */
-    protected $password;
-    /** @var string */
-    protected $certificatePath;
-    /** @var string */
-    protected $certificatePassword;
+    protected $merchantSite;
     /** @var ConnectionSettingsData */
     protected $connectionSettings;
     
@@ -31,6 +23,7 @@ class IntegrationTestBase extends \PHPUnit_Framework_TestCase {
     public $logger;
     
     public function __construct() {
+		$this->merchantSite = MerchantSettings::MERCHANT_SITE;
         $this->connectionSettings = new ConnectionSettingsData();
         $this->connectionSettings->login = MerchantSettings::BASIC_LOGIN;
         $this->connectionSettings->password = MerchantSettings::BASIC_PASSWORD;
