@@ -10,7 +10,8 @@ class OrderCreateTest extends IntegrationTestBase {
     public function testRequest(){
         $client = (new PostClient($this->connectionSettings))->setLogger($this->logger);
         $request = new OrderCreateRequest(10, 'RUB');
-        
+		$request->setCustomFields(['site' => $this->merchantSite]);
+
         $this->assertTrue((new OrderCreateResponse($client->sendRequest($request)))->isValid());
     }
 }
