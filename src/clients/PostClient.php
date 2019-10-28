@@ -39,6 +39,7 @@ class PostClient extends BaseClient {
 		$response = curl_exec($curl);
         
         if($this->logger){
+            $this->logger->log(self::LOG_LEVEL, 'Login ' . $this->connectionSettings->login, ['from' => $service->getRequestUrl()]);
             $this->logger->log(self::LOG_LEVEL, 'Requested url '.$requestUrl.' params '. json_encode($this->getMaskedParams($requestParameters)), ['from' => $service->getRequestUrl()]);
             $this->logger->log(self::LOG_LEVEL, 'Response '.$response, ['from' => $service->getRequestUrl()]);
         }
