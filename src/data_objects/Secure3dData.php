@@ -13,4 +13,5 @@ class Secure3dData extends BaseDataObject {
     public $xid;
     public $cavv;
     public $eci;
+    public $browser_details;
 }
