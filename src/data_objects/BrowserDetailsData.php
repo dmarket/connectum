@@ -20,6 +20,9 @@ class BrowserDetailsData extends BaseDataObject {
         if ($this->browser_java_enabled !== null) {
             $parameters['browser_java_enabled'] = $this->browser_java_enabled;
         }
+        if ($this->browser_timezone !== null) {
+            $parameters['browser_timezone'] = $this->browser_timezone;
+        }
         return $parameters;
     }
 }
