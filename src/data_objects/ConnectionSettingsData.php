@@ -9,11 +9,7 @@ class ConnectionSettingsData extends BaseDataObject {
     public $privateKeyPath;
     public $privateKeyPassword;
     public $connectionTimeout = 30;
-    protected $baseUrl = 'https://api.connectum.eu';
-    
-    public function setTestingMode(){
-        $this->baseUrl = 'https://api.sandbox.connectum.eu';
-    }
+    public $baseUrl;
     
     public function getBaseUrl(){
         return $this->baseUrl;
