@@ -1,5 +1,5 @@
 {
-    "name": "payprocessing/connectum-sdk",
+    "name": "dmarket/connectum-sdk",
     "description": "Connectum SDK",
     "require": {
         "php": ">=5.5",
