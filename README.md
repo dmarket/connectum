@@ -1,7 +1,7 @@
 Platron Connectum SDK
 ===============
 ## Install
-<pre><code>composer require platron/connectum-sdk</pre></code>
+<pre><code>composer require dmarket/connectum-sdk</pre></code>
 
 To use SDK you need to generate pem certificate and private key. You could use this command
 ```
