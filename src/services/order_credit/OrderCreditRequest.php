@@ -20,6 +20,8 @@ class OrderCreditRequest extends BasePostRequest {
     protected $options;
     /** @var DynamicDescriptorData */
     protected $dynamic_descritor;
+    /** @var array */
+    protected $custom_fields;
     
     /**
      * {@inheritdoc}
@@ -58,6 +60,16 @@ class OrderCreditRequest extends BasePostRequest {
      */
     public function setDynamicDescriptor(DynamicDescriptorData $dynamicDescriptor){
         $this->dynamic_descritor = $dynamicDescriptor;
+        return $this;
+    }
+    
+    /**
+     * Set custom fields
+     * @param array $fields
+     * @return self
+     */
+    public function setCustomFields($fields){
+        $this->custom_fields = $fields;
         return $this;
     }
 }
