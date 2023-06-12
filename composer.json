@@ -3,13 +3,11 @@
     "description": "Connectum SDK",
     "require": {
         "php": ">=5.5",
-        "psr/log": "^1.0",
+        "psr/log": "^3.0.0",
         "ext-curl": "*",
         "ext-json": "*"
     },
     "require-dev": {
-		"php": ">=5.6",
-		"phpunit/phpunit": "5.7"
 	},
 	"autoload": {
 		"psr-4": {
